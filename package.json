@@ -1,0 +1,17 @@
+{
+  "name": "@rsi/design-core",
+  "version": "0.0.0",
+  "description": "RSI branding, design, and related standards/components core library",
+  "scripts": {
+    "nuke": "rm -rf node_modules packages/components/node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RepublicServicesRepository/design-core"
+  },
+  "workspaces": {
+    "packages": ["packages/*"]
+  },
+  "private": true,
+  "devDependencies": {}
+}
