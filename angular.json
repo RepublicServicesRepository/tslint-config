@@ -2,7 +2,122 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "guide": {
+      "root": "apps/guide/",
+      "sourceRoot": "apps/guide/src",
+      "projectType": "application",
+      "prefix": "rsi",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/guide",
+            "index": "apps/guide/src/index.html",
+            "main": "apps/guide/src/main.ts",
+            "polyfills": "apps/guide/src/polyfills.ts",
+            "tsConfig": "apps/guide/tsconfig.app.json",
+            "assets": [
+              "apps/guide/src/favicon.ico",
+              "apps/guide/src/assets"
+            ],
+            "styles": [
+              "apps/guide/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/guide/src/environments/environment.ts",
+                  "with": "apps/guide/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "guide:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "guide:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "guide:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/guide/tsconfig.app.json",
+              "apps/guide/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/guide/jest.config.js",
+            "tsConfig": "apps/guide/tsconfig.spec.json",
+            "setupFile": "apps/guide/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "guide-e2e": {
+      "root": "apps/guide-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/guide-e2e/protractor.conf.js",
+            "devServerTarget": "guide:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "guide:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/guide-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
@@ -10,5 +125,6 @@
     },
     "defaultCollection": "@nrwl/schematics",
     "packageManager": "yarn"
-  }
+  },
+  "defaultProject": "guide"
 }
