@@ -73,6 +73,6 @@ To run the design-guide (guide) app locally, for previewing CSS changes and/or w
 
 #### Design Guide
 
-The design guide is an Angular application located in the `guide` subdirectory in this repository.
+The design guide is an Angular application located in the `apps/guide` subdirectory in this repository.
 
-For information about developing the design guide, please refer to [the documentation](guide/README.md).
+For information about developing the design guide, please refer to [the documentation](apps/guide/README.md).
