@@ -13,6 +13,9 @@
     },
     "guide-e2e": {
       "tags": []
+    },
+    "styles": {
+      "tags": []
     }
   }
 }

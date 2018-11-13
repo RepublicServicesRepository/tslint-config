@@ -1,0 +1,7 @@
+{
+  "name": "@rsi/styles",
+  "description": "Design Core styles",
+  "version": "0.0.1",
+  "sass": "src/core.scss",
+  "style": "src/core.css"
+}

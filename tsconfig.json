@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@rsi/styles": [
+        "libs/styles/src/index.ts"
+      ]
     }
   },
   "exclude": [

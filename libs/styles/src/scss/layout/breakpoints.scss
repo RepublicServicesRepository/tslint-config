@@ -1,0 +1,443 @@
+// https://material.io/design/layout/responsive-layout-grid.html#breakpoints
+
+// Breakpoint start values (window)
+$xs: 0px;
+$sm: 600px;
+$md: 1024px;
+$lg: 1440px;
+$xl: 1920px;
+// Breakpoint start values (handset portrait)
+$hp-sm: 0px;
+$hp-md: 360px;
+$hp-lg: 400px;
+// Breakpoint start values (handset landscape)
+$hl-sm: 480px;
+$hl-md: $sm;
+$hl-lg: 840px;
+// Breakpoint start values (tablet portrait)
+$tp-sm: $sm;
+$tp-lg: 720px;
+// Breakpoint start values (tablet landscape)
+$tl-sm: 960px;
+$tl-lg: $md;
+
+// Breakpoint end values (window)
+$xs-max: $sm - 1px;
+$sm-max: $md - 1px;
+$md-max: $lg - 1px;
+$lg-max: $xl - 1px;
+// Breakpoint end values (handset portrait)
+$hp-sm-max: $hp-md - 1px;
+$hp-md-max: $hp-lg - 1px;
+// Breakpoint end values (handset landscape)
+$hl-sm-max: $hl-md - 1px;
+$hl-md-max: $hl-lg - 1px;
+// Breakpoint end values (tablet portrait)
+$tp-sm-max: $tp-lg - 1px;
+// Breakpoint end values (tablet landscape)
+$tl-sm-max: $tl-lg - 1px;
+
+$portrait: '(orientation: portrait)';
+$landscape: '(orientation: landscape)';
+
+$sizes: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  hp-sm: $hp-sm,
+  hp-md: $hp-md,
+  hp-lg: $hp-lg,
+  hl-sm: $hl-sm,
+  hl-md: $hl-md,
+  hl-lg: $hl-lg,
+  tp-sm: $tp-sm,
+  tp-lg: $tp-lg,
+  tl-sm: $tl-sm,
+  tl-lg: $tl-lg
+);
+$sizes-up: (
+  xs: sm,
+  sm: md,
+  md: lg,
+  lg: xl,
+  hp-sm: hp-md,
+  hp-md: hp-lg,
+  hl-sm: hl-md,
+  hl-md: hl-lg,
+  tp-sm: tp-lg,
+  tl-sm: tl-lg
+);
+$sizes-down: (
+  xl: lg,
+  lg: md,
+  md: sm,
+  sm: xs,
+  tl-lg: tl-sm,
+  tp-lg: tp-sm,
+  hl-lg: hl-md,
+  hl-md: hl-sm,
+  hp-lg: hp-md,
+  hp-md: hp-sm
+);
+$sizes-max: (
+  xs: $xs-max,
+  sm: $sm-max,
+  md: $md-max,
+  lg: $lg-max,
+  hp-sm: $hp-sm-max,
+  hp-md: $hp-md-max,
+  hl-sm: $hl-sm-max,
+  hl-md: $hl-md-max,
+  tp-sm: $tp-sm-max,
+  tl-sm: $tl-sm-max
+);
+
+@function size-up($size) {
+  @return map-get($sizes-up, $size);
+}
+
+@function size-down($size) {
+  @return map-get($sizes-down, $size);
+}
+
+@function max-of($size) {
+  @return map-get($sizes-max, $size);
+}
+
+@function size-of($size) {
+  @return map-get($sizes, $size);
+}
+
+// Single-media
+@mixin xs {
+  @media (max-width: max-of(xs)) {
+    @content;
+  }
+}
+
+@mixin sm-handset-portrait {
+  @media #{$portrait} and (max-width: max-of(hp-sm)) {
+    @content;
+  }
+}
+@mixin sm-handset-landscape {
+  @media #{$landscape} and (max-width: max-of(hl-sm)) {
+    @content;
+  }
+}
+@mixin sm-tablet-portrait {
+  @media #{$portrait} and (max-width: max-of(tp-sm)) {
+    @content;
+  }
+}
+@mixin sm-tablet-landscape {
+  @media #{$landscape} and (max-width: max-of(tl-sm)) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: size-of(sm)) and (max-width: max-of(sm)) {
+    @content;
+  }
+}
+
+@mixin md-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-md)) and (max-width: max-of(hp-md)) {
+    @content;
+  }
+}
+@mixin md-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-md)) and (max-width: max-of(hl-md)) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: size-of(md)) and (max-width: max-of(md)) {
+    @content;
+  }
+}
+
+@mixin lg-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-lg)) and (max-width: max-of(hp-lg)) {
+    @content;
+  }
+}
+@mixin lg-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-lg)) and (max-width: max-of(hl-lg)) {
+    @content;
+  }
+}
+@mixin lg-tablet-portrait {
+  @media #{$portrait} and (min-width: size-of(tp-lg)) and (max-width: max-of(tp-lg)) {
+    @content;
+  }
+}
+@mixin lg-tablet-landscape {
+  @media #{$landscape} and (min-width: size-of(tl-lg)) and (max-width: max-of(tl-lg)) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: size-of(lg)) and (max-width: max-of(lg)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: size-of(xl)) {
+    @content;
+  }
+}
+
+// Multi-media greater/less -than (open-ended)
+@mixin gt-xs {
+  @media (min-width: size-of(xs)) {
+    @content;
+  }
+}
+@mixin lt-xs {
+  @include xs {
+    @content;
+  }
+}
+
+@mixin gt-sm-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-sm)) {
+    @content;
+  }
+}
+@mixin gt-sm-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-sm)) {
+    @content;
+  }
+}
+@mixin gt-sm-tablet-portrait {
+  @media #{$portrait} and (min-width: size-of(tp-sm)) {
+    @content;
+  }
+}
+@mixin gt-sm-tablet-landscape {
+  @media #{$landscape} and (min-width: size-of(tl-sm)) {
+    @content;
+  }
+}
+@mixin gt-sm {
+  @media (min-width: size-of(sm)) {
+    @content;
+  }
+}
+@mixin lt-sm-handset-portrait {
+  @media #{$portrait} and (max-width: max-of(size-down(hp-sm))) {
+    @content;
+  }
+}
+@mixin lt-sm-handset-landscape {
+  @media #{$landscape} and (max-width: max-of(size-down(hl-sm))) {
+    @content;
+  }
+}
+@mixin lt-sm-tablet-portrait {
+  @media #{$portrait} and (max-width: max-of(size-down(tp-sm))) {
+    @content;
+  }
+}
+@mixin lt-sm-tablet-landscape {
+  @media #{$landscape} and (max-width: max-of(size-down(tl-sm))) {
+    @content;
+  }
+}
+@mixin lt-sm {
+  @media (max-width: max-of(size-down(sm))) {
+    @content;
+  }
+}
+
+@mixin gt-md-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-md)) {
+    @content;
+  }
+}
+@mixin gt-md-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-md)) {
+    @content;
+  }
+}
+@mixin gt-md {
+  @media (min-width: size-of(md)) {
+    @content;
+  }
+}
+@mixin lt-md-handset-portrait {
+  @media #{$portrait} and (max-width: max-of(size-down(hp-md))) {
+    @content;
+  }
+}
+@mixin lt-md-handset-landscape {
+  @media #{$landscape} and (max-width: max-of(size-down(hl-md))) {
+    @content;
+  }
+}
+@mixin lt-md {
+  @media (max-width: max-of(size-down(md))) {
+    @content;
+  }
+}
+
+@mixin gt-lg-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-lg)) {
+    @content;
+  }
+}
+@mixin gt-lg-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-lg)) {
+    @content;
+  }
+}
+@mixin gt-lg-tablet-portrait {
+  @media #{$portrait} and (min-width: size-of(tp-lg)) {
+    @content;
+  }
+}
+@mixin gt-lg-tablet-landscape {
+  @media #{$landscape} and (min-width: size-of(tl-lg)) {
+    @content;
+  }
+}
+@mixin gt-lg {
+  @media (min-width: size-of(lg)) {
+    @content;
+  }
+}
+@mixin lt-lg-handset-portrait {
+  @media #{$portrait} and (max-width: max-of(size-down(hp-lg))) {
+    @content;
+  }
+}
+@mixin lt-lg-handset-landscape {
+  @media #{$landscape} and (max-width: max-of(size-down(hl-lg))) {
+    @content;
+  }
+}
+@mixin lt-lg-tablet-portrait {
+  @media #{$portrait} and (max-width: max-of(size-down(tp-lg))) {
+    @content;
+  }
+}
+@mixin lt-lg-tablet-landscape {
+  @media #{$landscape} and (max-width: max-of(size-down(tl-lg))) {
+    @content;
+  }
+}
+@mixin lt-lg {
+  @media (max-width: max-of(size-down(lg))) {
+    @content;
+  }
+}
+
+@mixin gt-xl {
+  @include xl {
+    @content;
+  }
+}
+@mixin lt-xl {
+  @media (max-width: max-of(size-down(xl))) {
+    @content;
+  }
+}
+
+// Multi-media spans (closed-ended)
+@mixin xs-sm {
+  @include lt-sm {
+    @content;
+  }
+}
+@mixin xs-md {
+  @include lt-md {
+    @content;
+  }
+}
+@mixin xs-lg {
+  @include lt-lg {
+    @content;
+  }
+}
+@mixin xs-xl {
+  @include lt-xl {
+    @content;
+  }
+}
+
+@mixin sm-md-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-sm)) and (max-width: max-of(hp-md)) {
+    @content;
+  }
+}
+@mixin sm-md-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-sm)) and (max-width: max-of(hl-md)) {
+    @content;
+  }
+}
+@mixin sm-md {
+  @media (min-width: size-of(sm)) and (max-width: max-of(md)) {
+    @content;
+  }
+}
+@mixin sm-lg-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-sm)) and (max-width: max-of(hp-lg)) {
+    @content;
+  }
+}
+@mixin sm-lg-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-sm)) and (max-width: max-of(hl-lg)) {
+    @content;
+  }
+}
+@mixin sm-lg-tablet-portrait {
+  @media #{$portrait} and (min-width: size-of(tp-sm)) and (max-width: max-of(tp-lg)) {
+    @content;
+  }
+}
+@mixin sm-lg-tablet-landscape {
+  @media #{$landscape} and (min-width: size-of(tl-sm)) and (max-width: max-of(tl-lg)) {
+    @content;
+  }
+}
+@mixin sm-lg {
+  @media (min-width: size-of(sm)) and (max-width: max-of(lg)) {
+    @content;
+  }
+}
+@mixin sm-xl {
+  @include gt-sm {
+    @content;
+  }
+}
+
+@mixin md-lg-handset-portrait {
+  @media #{$portrait} and (min-width: size-of(hp-md)) and (max-width: max-of(hp-lg)) {
+    @content;
+  }
+}
+@mixin md-lg-handset-landscape {
+  @media #{$landscape} and (min-width: size-of(hl-md)) and (max-width: max-of(hl-lg)) {
+    @content;
+  }
+}
+@mixin md-lg {
+  @media (min-width: size-of(md)) and (max-width: max-of(lg)) {
+    @content;
+  }
+}
+@mixin md-xl {
+  @include gt-md {
+    @content;
+  }
+}
+
+@mixin lg-xl {
+  @include gt-lg {
+    @content;
+  }
+}

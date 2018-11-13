@@ -116,6 +116,20 @@
           }
         }
       }
+    },
+    "styles": {
+      "root": "libs/styles",
+      "sourceRoot": "libs/styles/src",
+      "projectType": "library",
+      "prefix": "rsi",
+      "architect": {
+        "build": {
+          "builder": "builder coming soon",
+          "options": {
+            "project": "libs/styles/ng-package.json"
+          }
+        }
+      }
     }
   },
   "cli": {
