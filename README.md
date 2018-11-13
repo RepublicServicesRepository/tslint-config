@@ -69,7 +69,7 @@ To run commands globally, i.e. for any package that has the given command, use t
 
 ###### Starting individual apps
 
-To run the design-guide (guide) locally, for previewing CSS changes and/or web components, `cd` into the components directory and run `ng serve --project=guide` or `yarn start --project=guide`.
+To run the design-guide (guide) app locally, for previewing CSS changes and/or web components, run `ng serve --project=guide` or `yarn start --project=guide`.
 
 #### Design Guide
 
