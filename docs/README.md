@@ -53,3 +53,7 @@ rgba(50, 240, 130, 1)
 @error-red
 #ff4d3b
 rgba(255, 77, 59, 1)
+
+## Breakpoints
+
+Please refer to [Material Design breakpoints](https://material.io/design/layout/responsive-layout-grid.html#breakpoints) documentation.
