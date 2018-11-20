@@ -2,6 +2,8 @@
 
 RSI branding, design, and related standards/components core library.
 
+> ⚠️ This documentation is incomplete; proceed with caution.
+
 ## Design documentation
 
 Go [here](docs/README.md) to see the design documentation and guidelines.
@@ -16,18 +18,11 @@ Go [here](docs/README.md) to see the design documentation and guidelines.
 
 This is a [monorepo](https://medium.com/@maoberlehner/monorepos-in-the-wild-33c6eb246cb9), meaning, this repo contains a *collection of packages* that can be imported individually.
 
-The easiest way to consume this repo is to add it as a dependency and use deep-imports to get the pieces you need. For example, to import the core CSS:
+This monorepo uses [nrwl/nx](https://nrwl.io/nx), a tool for Angular monorepo projects. Built by former Google employees :)
 
-```scss
-// Import styles as CSS
-@import '@rsi/styles/core.css';
-
-// Import styles as Sass
-@import '@rsi/styles/core.scss';
-
-// Deep import
-@import '@rsi/styles/scss/layout/breakpoints.scss';
-```
+This monorepo also implements [conventional-commit](https://www.conventionalcommits.org) (in combination with [commitlint](https://marionebl.github.io/commitlint)) which follows the
+[Angular convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) for commit messages. This will allow us to easily/reliably
+automate versions and changelogs.
 
 ## **Developer Docs**
 
@@ -75,8 +70,25 @@ To run commands globally, i.e. for any package that has the given command, use t
 
 To run the design-guide (guide) app locally, for previewing CSS changes and/or web components, run `ng serve --project=guide` or `yarn start --project=guide`.
 
-#### Design Guide
+### Design Guide
 
-The design guide is an Angular application located in the `apps/guide` subdirectory in this repository.
+The design guide is an Angular application located in the `apps/guide` subdirectory in this repository. As you work on libraries in this repository, you will use the guide app to preview your changes.
 
-For information about developing the design guide, please refer to [the documentation](apps/guide/README.md).
+For information about developing the design guide, please refer to the [documentation](apps/guide/README.md).
+
+### Imports
+
+The easiest way to import packages from this repo is to add it as a dependency and import it directly, or use deep-imports to get just the piece you need. For example, to import the core CSS:
+
+```scss
+// Import styles as CSS
+@import '@rsi/styles/core.css';
+
+// Import styles as Sass
+@import '@rsi/styles/core.scss';
+
+// Deep import
+@import '@rsi/styles/scss/layout/breakpoints.scss';
+```
+
+> Package publication has not yet been implemented, and no packages are currently published and are not available for use in other projects.
