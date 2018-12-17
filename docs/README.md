@@ -81,7 +81,7 @@ rgba(208, 25, 71, 1) |
 @crimson
 
 > 
-![#750c2a](https://placehold.it/15/750c2a/000000?text=+) 750c2a5 |
+![#750c2a](https://placehold.it/15/750c2a/000000?text=+) 750c2a |
 rgba(117, 12, 42, 1) |
 @cherry
 
@@ -149,6 +149,31 @@ rgba(100, 198, 68, 1) |
 ![#2c541c](https://placehold.it/15/2c541c/000000?text=+) 2c541c |
 rgba(44, 84, 28, 1) |
 @parsely
+
+##Typography
+
+###Heading Styles
+
+**Mega**: Bold | 96px | 80px leading
+
+**Jumbo**: Bold | 46px | 60px leading
+
+**Display**: Regular | 42px | 40px leading
+
+**Headline**: Semibold | 32px | 32px leading
+
+**Title**: Light | 22px | 28px leading
+   
+**Button**: Semibold | 18px | 24px leading | uppercase
+
+###Paragraph Styles
+
+**Paragraph**: Normal | 16px | 20px leading
+
+**Links**: Semibold | 14px | 20px leading | Underline
+
+**Caption**: Normal | 12px | 22px leading
+
 
 
 ## Breakpoints
