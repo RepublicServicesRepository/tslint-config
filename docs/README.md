@@ -7,11 +7,13 @@
 Republic Services’ color palette is simple and strong. By effectively using a few colors, we can ensure a consistent visual language on all Republic Services materials and promotions. Proper application of these colors will be detailed in the following pages. Please use only Republic Services approved colors and formulas as specified in this guide. This palette is not to be added to or subtracted from. The colors are not to be screened, layered or otherwise changed in base or tonality, except where explicitly noted here in the brand guidelines.
 
 ### Primary Colors
+
 |Hexadecimal Color  | RGBA Color | HTML Color |
 |:------------- | :------------- | :-------------
 ![#0586ce](https://placehold.it/15/0586ce/000000?text=+) 0586ce | rgba(5, 134, 206, 1) | @orient  | 
-![#004a7c](https://placehold.it/15/004a7c/000000?text=+) 004a7c|rgba(0, 74, 124, 1) | @denim
- ![#00273d](https://placehold.it/15/00273d/000000?text=+) 00273d |rgba(0, 39, 61, 1) |@blue-charcoal 
+![#004a7c](https://placehold.it/15/004a7c/000000?text=+) 004a7c |rgba(0, 74, 124, 1) | @denim
+![#00273d](https://placehold.it/15/00273d/000000?text=+) 00273d |rgba(0, 39, 61, 1) |@blue-charcoal 
+![#00273d](https://placehold.it/15/00273d/000000?text=+) 00273d |rgba(0, 39, 61, 1) |@blue-charcoal 
 ![#e4f6fd](https://placehold.it/15/e4f6fd/000000?text=+) e4f6fd |rgba(228, 246, 253, 1) |@foam
 ![#00adef](https://placehold.it/15/00adef/000000?text=+) 00adef |rgba(0, 173, 239, 1) |@cerulean
 ![#2b566b](https://placehold.it/15/2b566b/000000?text=+) 2b566b |rgba(43, 86, 107, 1) |@casal
@@ -20,6 +22,7 @@ Republic Services’ color palette is simple and strong. By effectively using a 
 ![#834a07](https://placehold.it/15/834a07/000000?text=+) 834a07 |rgba(131, 74, 7, 1) |@rusty-nail
 
 ### Secondary Palette
+
 |Hexadecimal Color  | RGBA Color | HTML Color |
 |:------------- | :------------- | :-------------
 ![#d4c8fc](https://placehold.it/15/d4c8fc/000000?text=+) d4c8fc |rgba(212, 200, 252, 1) |@perfume
@@ -45,9 +48,11 @@ Republic Services’ color palette is simple and strong. By effectively using a 
 ## Typography
 
 ### Open Sans
+
 Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web and mobile interfaces, and has excellent legibility characteristics in its letterforms. For more information and to download Opens visit the [Open Sans font page](https://fonts.google.com/specimen/Open+Sans).
 
 ### Open Sans Weights Used
+
 * Light
 * Normal
 * Semi-Bold
@@ -55,6 +60,7 @@ Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Dir
 * Extra-Bold
 
 ### Heading Styles
+
 |Heading Label  | Font Size | Font Weight | Leading | Transform
 |:------------- | :------------- | :------------- | :------------- | :-------------
 ![mega](images/mega.png) | 96px | Bold | 80px | None
@@ -65,6 +71,7 @@ Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Dir
 ![button](images/Button.png) | 18px | Semibold | 28px | Uppercase
 
 ### Paragraph Styles
+
 |Heading Label  | Font Size | Font Weight | Leading | Transform
 |:------------- | :------------- | :------------- | :------------- | :-------------
 ![body](images/body.png) | 16px | Regular | 24px | None
@@ -72,60 +79,124 @@ Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Dir
 ![caption](images/caption.png) | 12px | Regular | 20px | None
 
 ### Usage
+
 ![Dark-Light](images/typography-samples.png)
 
 ### Type Scale
-Device determines the units and scale for our typography for information on type scale visit: [Material Design Type Scale](https://material.io/design/typography/the-type-system.html#)
+
+Device size determines the units and scale for our typography for information on type scale visit: [Material Design Type Scale](https://material.io/design/typography/the-type-system.html#)
 
 ## Buttons
+
 Buttons can be represented as any color in the primary ADA Contrast compliant palette as follows:
 
 ### Solid Button
+
 ![solid-button](images/solid-btn.png)
 
 ### Oultine Button
+
 ![solid-button](images/stroked-btn.png)
 
 ### Icon Fill Button
+
 ![solid-button](images/icon-fill-btn.png)
 
 ### Icon Outline Button
+
 ![solid-button](images/icon-stroked-btn.png)
 
 ### Icon Button
+
 ![solid-button](images/icon-btn.png)
 
 ### Button Color options
+
 ![color-options](images/btn-colors.png)
+
 ### Button Sizes
+
 ![button-sizes](images/btn-sizes.png)
-For more information on buttons visit:
-[Material Design Buttons](https://material.io/design/components/buttons.html#)
+
+For more information on buttons visit: [Material Design Buttons](https://material.io/design/components/buttons.html#)
 
 ## Text Inputs
-Inputs or ‘text fields’ are important interactive elements that allow users to enter text into a UI. They typically appear in forms and dialogs. General usage includes email subscription forms, ecommerce, surveys and search. Inputs are component made up of many optional elements depending on use.  When designing Inputs should be: 
-* **Discoverable** Inputs should stand out and intuitive to users that they can input information.
-* **Clear** Text field states should be clearly differentiated from one another. Text fields should make it easy to understand the requested information and to address any errors.
-* **Accessible** Inputs should be keyboard navigable, Errors should be prominent and legible, screen readers should be able to translate placeholder text and errors accordingly.
-### Anatomy
-![Input Anatomy](images/anatomy-parts.png)   ![Input Anatomy](images/input-anatomy.png)
 
+Inputs or ‘text fields’ are important interactive elements that allow users to enter text into a UI. They typically appear in forms and dialogs. General usage includes email subscription forms, ecommerce, surveys and search. When designing Inputs should:
+
+* *Discoverable* - Inputs should stand out and intuitive to users that they can input information.
+
+* *Clear* - Text field states should be clearly differentiated from one another. Text fields should make it easy to understand the requested information and to address any errors.
+
+* *Accessible* - Inputs should be keyboard navigable, Errors should be prominent and legible, screen readers should be able to translate placeholder text and errors accordingly.
+
+### Anatomy
+
+Inputs are component made up of many optional elements depending on use. 
+
+| Options | Spec
+|:------------- | :------------- |
+| * Container <br> * Normal <br> * Input text <br> * Trailing icon (optional) <br> * Activation indicator <br> * Helper text (optional)| ![Input Anatomy](images/input-anatomy.png)
 
 ### Single Line Input
 ![Single Line](images/single-line-input.png)
+
 ![](images/single-line-animation.gif)
 
 ### Outline Input
 ![Single Line](images/outline-input.png)
+
 ![](images/outline-input-animation.gif)
 
-For more information on text inputs visit:
-[Material Design Inputs](https://material.io/design/components//text-fields.html#anatomy)
+For more information on text inputs visit: [Material Design Inputs](https://material.io/design/components//text-fields.html#anatomy)
+
+
+## Snackbars
+Snackbars inform users of a process that an app has performed or will perform. They appear temporarily, towards the bottom of the screen.
+
+### Behavior
+Snackbars appear without warning, and don't require user interaction. They automatically disappear from the screen after a minimum of four seconds, and a maximum of ten seconds. When multiple snackbar updates are necessary, they should appear one at a time.
+
+|Type  | Example | Spec
+|:------------- | :------------- | :------------- |
+| Single-line with Action | ![Single-line Snackbar](images/single-line-snackbar.png) | ![Single-line Snackbar Spec](images/single-line-snackbar-spec.png)
+| Multi-line with Action | ![Multi-line Snackbar](images/multi-line-snackbar.png) | ![Multi-line Snackbar Spec](images/multi-line-snackbar-spec.png)
+
+For more information on snackbars visit:
+[Material Design Snackbars](https://material.io/design/components/snackbars.html)
+
+## Banners
+A banner displays a prominent message and related optional actions.
+
+### Behavior
+Banners typically appear when a screen loads content.
+Banners that appear after a screen loads should animate on screen from the top of a layout. If the banner is at the same elevation as content, it pushes content downwards.
+
+|Type  | Example | Spec
+|:------------- | :------------- | :------------- |
+| Multi-line Banner | ![Modal Dialog](images/multi-line-banner.png) | ![Modal Banner Spec](images/multi-line-banner-spec.png)
+
+For more information on banners visit:
+[Material Design Banners](https://material.io/design/components/banners.html)
+
+## Modal Dialogs
+A dialog is a type of modal window that appears in front of app content to provide critical information or ask for a decision. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed, or a required action has been taken. Dialogs are purposefully interruptive, so they should be used sparingly.
+
+### Behavior
+Modals are initiated when the user needs to take action in order to fulfill a pre-designated task. They require users to stop their current task. They should be used sparingly, as not every choice or setting warrants interruption. Modals retain focus until dismissed or an action has been taken, such as choosing a setting. They shouldn’t be obscured by other elements or appear partially on screen, with the exception of full-screen dialogs. Most dialog content should avoid scrolling. When scrolling is required, the dialog title is pinned at the top, with buttons pinned at the bottom. This ensures selected content remains visible alongside the title and buttons, even upon scroll. Dialogs don’t scroll with elements outside of the dialog, such as the background.
+
+|Type  | Example | Spec
+|:------------- | :------------- | :------------- |
+| Multi-line Dialog | ![Modal Dialog](images/modal-dialog.png) | ![Modal Dialog Spec](images/modal-dialog-spec.png)
+
+For more information on modal dialogs visit:
+[Material Design Dialogs](https://material.io/design/components/dialogs.html)
 
 ## Breakpoints
-Mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts. Our breakpoints are as follows:
-* **Phone:** _320px_ to _767px_
-* **Tablet:** _768px_ to _1023px_
-* **Desktop:** _1024px_ and above
+Mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts. Our breakpoints are as follows: 
+
+|Mobile | Desktop |
+|:------------- | :------------- |
+| _320px_ to _767px_ | _768px_ to and above
 
 Please refer to [Material Design breakpoints](https://material.io/design/layout/responsive-layout-grid.html#breakpoints) documentation.
