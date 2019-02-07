@@ -26,7 +26,7 @@ Republic Services’ color palette is simple and strong. By effectively using a 
 |Hexadecimal Color  | RGBA Color | HTML Color |
 |:------------- | :------------- | :-------------
 ![#d4c8fc](https://placehold.it/15/d4c8fc/000000?text=+) d4c8fc |rgba(212, 200, 252, 1) |@perfume
-![#9d8ae1](https://placehold.it/15/9d8ae1/000000?text=+) 9d8ae1 |rgba(157, 138, 255, 1) |@lavender
+![#9d8ae1](https://placehold.it/15/9d8ae1/000000?text=+) 9d8ae1 |rgba(157, 138, 225, 1) |@lavender
 ![#432f7f](https://placehold.it/15/432f7f/000000?text=+) 432f7f |rgba(67, 47, 127, 1) |@mulled-wine
 ![#ff97b5](https://placehold.it/15/ff97b5/000000?text=+) ff97b5 |rgba(255, 151, 181, 1) |@pink-salmon
 ![#d01947](https://placehold.it/15/d01947/000000?text=+) d01947 |rgba(208, 25, 71, 1) |@crimson
