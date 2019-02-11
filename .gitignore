@@ -11,6 +11,7 @@
 /coverage
 /reports
 /.sonar
+/packages
 
 # dependencies
 /node_modules

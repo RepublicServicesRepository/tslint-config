@@ -2,5 +2,9 @@
   "version": "independent",
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "npmClientArgs": []
+  "npmClientArgs": [],
+  "private": true,
+  "packages": [
+    "packages/*"
+  ]
 }
