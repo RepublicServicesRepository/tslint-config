@@ -1,0 +1,14 @@
+* @therealklanni
+
+# Code sign-offs
+*.js @therealklanni
+*.ts @therealklanni
+
+# Design Style sign-offs
+*.css @blaudner
+*.scss @blaudner
+*.sass @blaudner
+*.less @blaudner
+
+# Design docs sign-offs
+/docs/ @blaudner
