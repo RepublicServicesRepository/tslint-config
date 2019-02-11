@@ -8,6 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
+    "list": "lerna list",
     "e2e": "ng e2e",
     "affected:apps": "./node_modules/.bin/nx affected:apps",
     "affected:libs": "./node_modules/.bin/nx affected:libs",
@@ -23,9 +24,8 @@
     "update:check": "ng update",
     "workspace-schematic": "./node_modules/.bin/nx workspace-schematic",
     "dep-graph": "./node_modules/.bin/nx dep-graph",
-    "projects": "cat angular.json | npx jp-cli -hk projects",
-    "nuke": "rm -rf node_modules",
-    "help": "./node_modules/.bin/nx help"
+    "help": "./node_modules/.bin/nx help",
+    "nuke": "rm -rf node_modules"
   },
   "repository": {
     "type": "git",
