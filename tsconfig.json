@@ -27,6 +27,9 @@
       ],
       "@rsi/core": [
         "libs/core/src/index.ts"
+      ],
+      "@rsi/component/header": [
+        "libs/component/header/src/index.ts"
       ]
     }
   },

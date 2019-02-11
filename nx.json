@@ -22,6 +22,12 @@
     },
     "core": {
       "tags": []
+    },
+    "component-header": {
+      "tags": [
+        "shared",
+        "component"
+      ]
     }
   }
 }
