@@ -72,7 +72,11 @@ The best way to test your components in realtime is to consume them in the **des
 
 ### Apps
 
-To run individual apps like the **design-guide** use `ng serve --project=guide` or `yarn start --project=guide`. You many need to specify `--port=<port>` if multiple apps are being run. You can generate new apps using the proper Nx Workspace commands.
+> ℹ In this project, **design-guide** will be the only app. Do not *generate* any new apps.
+
+The design-guide is an Angular application located in the `apps/guide` subdirectory in this repository. As you work on libraries in this repository, you will use the guide app to preview your changes.
+
+For information about developing the design-guide, please refer to the [documentation](apps/guide/README.md).
 
 ### Libraries
 
@@ -104,16 +108,13 @@ You can then consume this package in other external projects by adding the git r
 
 **NOTE:** Gitpkg is required to publish the package because it is part of a monorepo and cannot be consumed in the `package.json` file as you would generally expect with a normal dependency from git. Gitpkg does a special tagged commit where it adds only the specific projects package files. This is a great way to deploy packages still in development and makes it easy to consume in an external project.
 
+## Importing in external projects
 
-## **Design Guide App**
+To list available packages type `yarn packages` or `lerna list`. Note, not all packages listed are published, but this should be helpful for quick reference. If the package is not published, it is not ready for use.
 
-The design-guide is an Angular application located in the `apps/guide` subdirectory in this repository. As you work on libraries in this repository, you will use the guide app to preview your changes.
+`npm install` the package just as you would normally for any package. The packages will be installed from a Private NPM repository, so make sure your npm credentials are set up.
 
-For information about developing the design-guide, please refer to the [documentation](apps/guide/README.md).
-
-### Imports
-
-The easiest way to import packages from this repo is to add it as a dependency and import it directly, or use deep-imports to get just the piece you need. For example, to import the core CSS:
+The easiest way to import packages from this repo is to import it directly, or use deep-imports to get just the piece you need. For example, to import the core CSS:
 
 ```scss
 // Import styles as CSS
