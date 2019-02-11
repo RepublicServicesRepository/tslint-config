@@ -1,4 +1,4 @@
-# design-core
+# design-core [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
 
 RSI branding, design, and related standards/components core library.
 
@@ -68,7 +68,7 @@ To run commands globally, i.e. for any package that has the given command, use t
 
 ## Developing
 
-The best way to test your components in realtime is to consume them the **design-guide** app. Once they are completed you can build and publish them for consumption by external projects.
+The best way to test your components in realtime is to consume them in the **design-guide** app. Once they are completed you can build and publish them for consumption by external projects.
 
 ### Apps
 
