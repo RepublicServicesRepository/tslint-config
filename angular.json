@@ -214,14 +214,6 @@
             "project": "libs/component/header/ng-package.json"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/component/header/src/test.ts",
-            "tsConfig": "libs/component/header/tsconfig.spec.json",
-            "karmaConfig": "libs/component/header/karma.conf.js"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -232,6 +224,14 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/component/header/jest.config.js",
+            "tsConfig": "libs/component/header/tsconfig.spec.json",
+            "setupFile": "libs/component/header/src/test-setup.ts"
           }
         }
       }
