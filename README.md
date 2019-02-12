@@ -82,6 +82,67 @@ For information about developing the design-guide, please refer to the [document
 
 Libraries should be separated as needed so each provides a logical functional package. Libraries can be easily consumed by other apps (or libraries) in this repo simply by direct reference (no need to npm install them). This also allows for you app to auto watch for changes and update when your libraries are modified. You can generate new apps using the proper Nx Workspace commands.
 
+#### Generating new libraries
+
+##### Step 1
+
+To generate a new lib, run `ng generate lib <name> --publishable --directory=<type>` where `<name>` is the base name of the new library and `<type>` is one of
+
+* `component`
+* `service`
+* `interface` - interfaces, classes, enums, etc
+
+The following output should be seen
+
+```
+CREATE libs/component/mylib/karma.conf.js (493 bytes)
+CREATE libs/component/mylib/ng-package.json (163 bytes)
+CREATE libs/component/mylib/package.json (176 bytes)
+CREATE libs/component/mylib/tsconfig.lib.json (749 bytes)
+CREATE libs/component/mylib/tsconfig.spec.json (268 bytes)
+CREATE libs/component/mylib/tslint.json (250 bytes)
+CREATE libs/component/mylib/src/index.ts (58 bytes)
+CREATE libs/component/mylib/src/test.ts (700 bytes)
+CREATE libs/component/mylib/src/lib/component-mylib.module.ts (254 bytes)
+CREATE libs/component/mylib/src/lib/component-mylib.module.spec.ts (442 bytes)
+UPDATE angular.json (7237 bytes)
+UPDATE package.json (3286 bytes)
+UPDATE nx.json (444 bytes)
+UPDATE tsconfig.json (787 bytes)
+yarn run v1.13.0
+$ ./node_modules/.bin/nx format:write --untracked --silent
+libs/component/mylib/src/index.ts 449ms
+libs/component/mylib/src/lib/component-mylib.module.spec.ts 34ms
+libs/component/mylib/src/lib/component-mylib.module.ts 13ms
+libs/component/mylib/src/test.ts 35ms
+✨  Done in 3.37s.
+```
+
+> ⚠️ Important: it may be necessary to edit the generated `ng-package.json` file so that it correctly targets the schema, as in the example below. The `"$schema"` entry should have the same number of `../` occurrences as the `"dest"` entry.
+
+```json
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/libs/component/header",
+}
+```
+
+##### Step 2
+
+###### (If Step 1 generated a `component`)
+
+Next run `ng g component <name> --prefix rsi --style=scss --project=component-<name>` where `<name>` are replaced with the *same base name* from Step 1.
+
+You should see the following output
+
+```
+CREATE libs/component/mylib/src/lib/mylib/mylib.component.css (0 bytes)
+CREATE libs/component/mylib/src/lib/mylib/mylib.component.html (25 bytes)
+CREATE libs/component/mylib/src/lib/mylib/mylib.component.spec.ts (628 bytes)
+CREATE libs/component/mylib/src/lib/mylib/mylib.component.ts (269 bytes)
+UPDATE libs/component/mylib/src/lib/component-mylib.module.ts (266 bytes)
+```
+
 ### Building
 
 To build multiple projects at once you can use `lerna run build` if each has a `build` script in its `package.json`. For individually building a project use  `ng build <project name>`. If configured correctly this should build your project in the `/packages` folder.
