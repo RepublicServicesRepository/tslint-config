@@ -17,9 +17,6 @@
     "styles": {
       "tags": []
     },
-    "core": {
-      "tags": []
-    },
     "component-header": {
       "tags": [
         "shared",
@@ -30,7 +27,8 @@
       "tags": [
         "shared",
         "component",
-        "directive"
+        "directive",
+        "validator"
       ]
     }
   }

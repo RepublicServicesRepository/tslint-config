@@ -20,9 +20,6 @@
       "@rsi/styles": [
         "libs/styles/src/index.ts"
       ],
-      "@rsi/core": [
-        "libs/core/src/index.ts"
-      ],
       "@rsi/component/header": [
         "libs/component/header/src/index.ts"
       ],
