@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
-import { ComponentsModule } from '@rsi/components';
+import { ComponentHeaderModule } from '@rsi/component/header';
 
 import { AppComponent } from './app.component';
 
@@ -10,11 +10,11 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    ComponentsModule,
+    ComponentHeaderModule,
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
