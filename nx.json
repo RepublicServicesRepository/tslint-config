@@ -28,6 +28,13 @@
         "shared",
         "component"
       ]
+    },
+    "component-confirm-input": {
+      "tags": [
+        "shared",
+        "component",
+        "directive"
+      ]
     }
   }
 }

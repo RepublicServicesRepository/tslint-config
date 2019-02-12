@@ -22,13 +22,8 @@
             "main": "apps/guide/src/main.ts",
             "polyfills": "apps/guide/src/polyfills.ts",
             "tsConfig": "apps/guide/tsconfig.app.json",
-            "assets": [
-              "apps/guide/src/favicon.ico",
-              "apps/guide/src/assets"
-            ],
-            "styles": [
-              "apps/guide/src/styles.scss"
-            ],
+            "assets": ["apps/guide/src/favicon.ico", "apps/guide/src/assets"],
+            "styles": ["apps/guide/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -75,9 +70,7 @@
               "apps/guide/tsconfig.app.json",
               "apps/guide/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -110,9 +103,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/guide-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -159,9 +150,7 @@
               "libs/components/tsconfig.lib.json",
               "libs/components/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -194,9 +183,7 @@
               "libs/core/tsconfig.lib.json",
               "libs/core/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -221,9 +208,7 @@
               "libs/component/header/tsconfig.lib.json",
               "libs/component/header/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -233,6 +218,44 @@
             "tsConfig": "libs/component/header/tsconfig.spec.json",
             "setupFile": "libs/component/header/src/test-setup.ts"
           }
+        }
+      }
+    },
+    "component-confirm-input": {
+      "root": "libs/component/confirm-input",
+      "sourceRoot": "libs/component/confirm-input/src",
+      "projectType": "library",
+      "prefix": "rsi",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/component/confirm-input/tsconfig.lib.json",
+            "project": "libs/component/confirm-input/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/component/confirm-input/tsconfig.lib.json",
+              "libs/component/confirm-input/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/component/confirm-input/jest.config.js",
+            "tsConfig": "libs/component/confirm-input/tsconfig.spec.json",
+            "setupFile": "libs/component/confirm-input/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
         }
       }
     }
