@@ -1,6 +1,7 @@
 import { Directive, Input } from '@angular/core';
 import { FormControl, NG_VALIDATORS, Validator } from '@angular/forms';
-import { ConfirmInputValidators } from '@rsi/core';
+
+import { ConfirmInputValidator } from './confirm-input.validator';
 
 @Directive({
   selector: '[rsiAppConfirm]',
@@ -10,6 +11,6 @@ export class ConfirmInputDirective implements Validator {
   @Input() with: FormControl;
 
   validate(c: FormControl): { [key: string]: any } | null {
-    return ConfirmInputValidators.confirmInput(this.with)(c);
+    return ConfirmInputValidator.confirmInput(this.with)(c);
   }
 }
