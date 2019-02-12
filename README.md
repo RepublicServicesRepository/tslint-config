@@ -194,22 +194,6 @@ This library will contain all core styles, assets, palettes, themes and custom m
 
 > This library currently cannot be packaged and deployed for use in external projects. It is required that a custom Angular Builder found or made that can properly package this content.
 
-## **Components Library**
-
-This library will contain all shared components that will be consumed in other Republic Angular applications.
-
-To build use `ng build components`
-
-To packages and publish go to the `/libs/components` root and run `gitpkg publish`
-
-To consume in other projects you get the tag name that was published in the **design-core** git repo (example: *rsi-components-v0.0.1-gitpkg*) add to the `package.json`
-
-```json
-{
-  "@rsi/components": "git@github.com:RepublicServicesRepository/design-core.git#rsi-components-v0.0.1-gitpkg"
-}
-```
-
 ## **Core Library**
 
 This library will contain all standard core business models, validators, services etc. that will be consumed in other Republic Angular applications.
