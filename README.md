@@ -86,7 +86,7 @@ Libraries should be separated as needed so each provides a logical functional pa
 
 ##### Step 1
 
-To generate a new lib, run `ng generate lib <name> --publishable --directory=<type>` where `<name>` is the base name of the new library and `<type>` is one of
+To generate a new lib, run `ng generate lib <name> --publishable --directory=<type> --unit-test-runner=jest` where `<name>` is the base name of the new library and `<type>` is one of
 
 * `component`
 * `service`
@@ -131,7 +131,7 @@ libs/component/mylib/src/test.ts 35ms
 
 ###### (If Step 1 generated a `component`)
 
-Next run `ng g component <name> --prefix rsi --style=scss --project=component-<name>` where `<name>` are replaced with the *same base name* from Step 1.
+Next run `ng g component <name> --prefix rsi --style=scss --project=component-<name> --unit-test-runner=jest` where `<name>` are replaced with the *same base name* from Step 1.
 
 You should see the following output
 
