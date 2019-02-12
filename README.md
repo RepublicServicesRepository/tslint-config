@@ -20,11 +20,29 @@ This monorepo also implements [conventional-commit](https://www.conventionalcomm
 [Angular convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) for commit messages. This will allow us to easily/reliably
 automate versions and changelogs. **Please read the [CONTRIBUTING GUIDE](.github/CONTRIBUTING.md) for more information.**
 
-## **Design documentation**
+### Project goals
+
+Goals presented in `as a ⎽⎽⎽⎽, I want ⎽⎽⎽⎽, so I can ⎽⎽⎽⎽` format.
+
+#### Design
+
+As a **designer**, I want **clearly-defined guidelines**, so I can **iterate quickly on designs**.
+
+As a **designer**, I want **design standards**, so I can **produce consistent designs**.
+
+#### Development
+
+As a **developer**, I want **reuseable component code in a central repository**, so I can **not spend time duplicating effort**.
+
+As a **developer**, I want **a shared component library**, so I can **reuse components in any project**.
+
+As a **developer of an external RSI application**, I want **to install/upgrade packages independently**, so I can **avoid potentially breaking changes**.
+
+## Design documentation
 
 [Design documentation and guidelines are located here.](docs/README.md)
 
-## **Developer documentation**
+## Developer documentation
 
 > ⚠️ The following documentation is incomplete and these processes are still in flux at this time.
 
@@ -32,11 +50,11 @@ automate versions and changelogs. **Please read the [CONTRIBUTING GUIDE](.github
 
 The following terminology will be used throughout this document.
 
-* *project/projects* - referes to an app or a library in the context of an Nx Workspace.
-* *package/packages* — final builds for projects residing in the `/packages` subdirectory.
-* *publish* — refers to publishing private RSI packages.
+* *publish* — refers to publishing *packages* (to npm).
+* *library/libraries* — a component or other publishable library. Generally synonymous with package.
+* *package/packages* — published (to npm) libraries. Generally synonymous with library.
 * *dependency/dependencies* — refers to 3rd-party modules from the npm package registry.
-* *design-guide/design guide* — refers to the local project located in the `apps/guide` subdirectory which serves the guidelines, style guides, CSS component demos, and web component demos.
+* *design-guide/design guide* — refers to the app located in the `apps/guide` subdirectory which serves the guidelines, style guides, CSS component demos, and web component demos.
 
 ### Tools
 
@@ -66,9 +84,25 @@ To run commands globally, i.e. for any package that has the given command, use t
 
 > ℹ Some such commands may automatically be invoked before committing or before pushing the local branch to remote.
 
-## Developing
+### Developing
 
 The best way to test your components in realtime is to consume them in the **design-guide** app. Once they are completed you can build and publish them for consumption by external projects.
+
+#### Package (libraries) relationships
+
+![](docs/erd.dot.jpg)
+
+Design-guide (guide) is the only app in this project (guide-e2e is considered part of guide).
+
+When generating a library, a `type` will be specified. Nx will generate the appropriate files, directory structure, import aliases (only relevent for apps in this repository), and npm package names based on the `type` and `name` of the library.
+
+In the graph above, you can see that generating a lib of type `component` with the name `header` will produce a new component module with the classname `ComponentHeader`. It will be placed in the `libs/component/header/` subdir. Its *external* publish name will be `@rsi/component-header`. Its *internal* import alias will be `@rsi/component/header`.
+
+Study this graph to see the relations for other examples and how they can be consumed in external RSI applications.
+
+The mixed naming can be slightly confusing at first, but this is automated by Nx, so we just go with it. Use the graph above as a reference if you forget how the naming conventions relate.
+
+Libraries (packages) are organized in this way so that external RSI applications can consume *only the packages they need*. This allows each library to be developed and published independently, so developers of external RSI applications that use these packages can upgrade an individual package without needing to upgrade other packages that may have potentially breaking or unwanted changes.
 
 ### Apps
 
