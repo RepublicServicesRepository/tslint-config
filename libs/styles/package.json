@@ -1,7 +1,7 @@
 {
   "name": "@republicservices/styles",
   "description": "Design Core styles",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "sass": "src/core.scss",
   "style": "src/core.css",
   "gitHead": "ed0812c55d1af9af236e2651d489cbbc418e213c"
