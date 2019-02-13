@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
-import { ComponentHeaderModule } from '@rsi/component/header';
+import { ComponentHeaderModule } from '@republicservices/component/header';
 
 import { AppComponent } from './app.component';
 

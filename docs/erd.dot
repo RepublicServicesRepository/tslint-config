@@ -50,16 +50,16 @@ strict digraph {
       node [style=dashed]
       rank=same
 
-      sPaymentEvents [label="@rsi/service-payment-events"]
+      sPaymentEvents [label="@republicservices/service-payment-events"]
       ServicePaymentEvents->sPaymentEvents
 
-      iPaymentEvents [label="@rsi/interface-payment-events"]
+      iPaymentEvents [label="@republicservices/interface-payment-events"]
       InterfacePaymentEvent->iPaymentEvents
 
-      cHeader [label="@rsi/component-header"]
+      cHeader [label="@republicservices/component-header"]
       ComponentHeader->cHeader
 
-      cConfirmInput [label="@rsi/component-confirm-input"]
+      cConfirmInput [label="@republicservices/component-confirm-input"]
       ComponentConfirmInput->cConfirmInput
     }
   }
@@ -89,9 +89,9 @@ strict digraph {
       label="Internal import name"
       edge [color="#666666", dir=none, style=solid]
 
-      rHeader [label="@rsi/component/header"]
+      rHeader [label="@republicservices/component/header"]
       rHeader->ComponentHeader
-      rConfirmInput [label="@rsi/component/confirm-input"]
+      rConfirmInput [label="@republicservices/component/confirm-input"]
       rConfirmInput->ComponentConfirmInput
     }
 

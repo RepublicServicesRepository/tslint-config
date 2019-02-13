@@ -1,5 +1,5 @@
 {
-  "npmScope": "rsi",
+  "npmScope": "republicservices",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",

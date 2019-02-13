@@ -17,13 +17,13 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@rsi/styles": [
+      "@republicservices/styles": [
         "libs/styles/src/index.ts"
       ],
-      "@rsi/component/header": [
+      "@republicservices/component/header": [
         "libs/component/header/src/index.ts"
       ],
-      "@rsi/component/confirm-input": [
+      "@republicservices/component/confirm-input": [
         "libs/component/confirm-input/src/index.ts"
       ]
     },

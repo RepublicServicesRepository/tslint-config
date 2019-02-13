@@ -96,7 +96,7 @@ Design-guide (guide) is the only app in this project (guide-e2e is considered pa
 
 When generating a library, a `type` will be specified. Nx will generate the appropriate files, directory structure, import aliases (only relevent for apps in this repository), and npm package names based on the `type` and `name` of the library.
 
-In the graph above, you can see that generating a lib of type `component` with the name `header` will produce a new component module with the classname `ComponentHeader`. It will be placed in the `libs/component/header/` subdir. Its *external* publish name will be `@rsi/component-header`. Its *internal* import alias will be `@rsi/component/header`.
+In the graph above, you can see that generating a lib of type `component` with the name `header` will produce a new component module with the classname `ComponentHeader`. It will be placed in the `libs/component/header/` subdir. Its *external* publish name will be `@republicservices/component-header`. Its *internal* import alias will be `@republicservices/component/header`.
 
 Study this graph to see the relations for other examples and how they can be consumed in external RSI applications.
 
@@ -197,7 +197,7 @@ You can then consume this package in other external projects by adding the git r
 
 ```json
 {
-  "@rsi/components": "git@github.com:RepublicServicesRepository/design-core.git#rsi-components-v0.0.1-gitpkg"
+  "@republicservices/components": "git@github.com:RepublicServicesRepository/design-core.git#rsi-components-v0.0.1-gitpkg"
 }
 ```
 
@@ -213,13 +213,13 @@ The easiest way to import packages from this repo is to import it directly, or u
 
 ```scss
 // Import styles as CSS
-@import '@rsi/styles/core.css';
+@import '@republicservices/styles/core.css';
 
 // Import styles as Sass
-@import '@rsi/styles/core.scss';
+@import '@republicservices/styles/core.scss';
 
 // Deep import
-@import '@rsi/styles/scss/layout/breakpoints.scss';
+@import '@republicservices/styles/scss/layout/breakpoints.scss';
 ```
 
 ## **Styles Library**
@@ -240,6 +240,6 @@ To consume in other projects you get the tag name that was published in the **de
 
 ```json
 {
-  "@rsi/components": "git@github.com:RepublicServicesRepository/design-core.git#rsi-core-v0.0.1-gitpkg"
+  "@republicservices/components": "git@github.com:RepublicServicesRepository/design-core.git#rsi-core-v0.0.1-gitpkg"
 }
 ```
