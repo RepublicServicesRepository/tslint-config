@@ -1,7 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NxModule } from '@nrwl/nx';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { NxModule } from '@nrwl/nx';
+
 import { ComponentHeaderModule } from '@republicservices/component/header';
 
 import { AppComponent } from './app.component';
