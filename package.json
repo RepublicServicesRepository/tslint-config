@@ -38,7 +38,8 @@
     }
   },
   "workspaces": [
-    "libs/**"
+    "libs/*/*",
+    "libs/*"
   ],
   "private": true,
   "dependencies": {
