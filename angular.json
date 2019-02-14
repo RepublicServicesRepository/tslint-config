@@ -123,7 +123,7 @@
       "projectType": "library",
       "prefix": "rsi",
       "architect": {
-        "build": {
+        "xbuild": {
           "builder": "builder coming soon",
           "options": {
             "project": "libs/styles/ng-package.json"
