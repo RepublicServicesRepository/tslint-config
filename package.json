@@ -10,6 +10,7 @@
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "list": "lerna list",
     "e2e": "ng e2e",
+    "affected": "./node_modules/.bin/nx affected",
     "affected:apps": "./node_modules/.bin/nx affected:apps",
     "affected:libs": "./node_modules/.bin/nx affected:libs",
     "affected:build": "./node_modules/.bin/nx affected:build",
@@ -26,7 +27,9 @@
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
     "nuke": "rm -rf node_modules",
-    "affected": "./node_modules/.bin/nx affected"
+    "clean:dist": "for i in `lerna list -p`; do rimraf $i/dist; done; rimraf dist",
+    "prelerna:publish": "yarn --silent clean:dist; yarn --silent affected:build --base master && lerna version --yes",
+    "lerna:publish": "lerna publish from-git"
   },
   "repository": {
     "type": "git",
@@ -90,6 +93,7 @@
     "ngrx-store-freeze": "0.2.4",
     "prettier": "1.15.2",
     "protractor": "~5.4.0",
+    "rimraf": "^2.6.3",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
