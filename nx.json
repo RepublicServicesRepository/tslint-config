@@ -30,6 +30,9 @@
         "directive",
         "validator"
       ]
+    },
+    "tslint-config": {
+      "tags": []
     }
   }
 }

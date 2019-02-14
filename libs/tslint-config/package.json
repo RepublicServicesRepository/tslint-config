@@ -1,0 +1,18 @@
+{
+  "name": "@republicservices/tslint-config",
+  "version": "0.0.0",
+  "description": "Republic Services TSLint configuration",
+  "main": "index.js",
+  "author": "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "codelyzer": "^4.5.0",
+    "rxjs-tslint": "^0.1.6",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1"
+  }
+}

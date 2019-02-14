@@ -205,6 +205,19 @@
           "styleext": "scss"
         }
       }
+    },
+    "tslint-config": {
+      "root": "libs/tslint-config",
+      "sourceRoot": "libs/tslint-config",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "project": "libs/tslint-config/ng-package.json"
+          }
+        }
+      }
     }
   },
   "cli": {
