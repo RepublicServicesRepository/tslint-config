@@ -7,23 +7,22 @@ import { ConfirmInputDirective } from './confirm-input.directive';
 @Component({
   selector: 'rsi-confirm-wrapper',
   template: `
-    <form [formGroup]="testForm">
-      <input class="input1" type="text" formControlName="test">
-      <input #appConfirmInput class="input2" type="text" formControlName="testConfirm" appConfirm [with]="test">
+    <form [formGroup]="form">
+      <input type="text" formControlName="test">
+      <input #confirmInput type="text" formControlName="testConfirm" rsiConfirm [with]="test">
     </form>`
 })
 class AppConfirmValidatorWrapperComponent {
-  @ViewChild('appConfirmInput') public appConfirmInput: ConfirmInputDirective;
+  @ViewChild('confirmInput') public confirmInput: ConfirmInputDirective;
 
-  public testForm = new FormGroup({
+  public form = new FormGroup({
     test: new FormControl('testing'),
     testConfirm: new FormControl('')
   });
 }
 
 describe('ConfirmInputDirective', () => {
-  let component: ConfirmInputDirective;
-  let fixtureComponent: AppConfirmValidatorWrapperComponent;
+  let component: AppConfirmValidatorWrapperComponent;
   let fixture: ComponentFixture<AppConfirmValidatorWrapperComponent>;
 
   beforeEach(
@@ -40,13 +39,12 @@ describe('ConfirmInputDirective', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AppConfirmValidatorWrapperComponent);
-    fixtureComponent = fixture.componentInstance;
-    component = fixture.componentInstance.appConfirmInput;
+    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component.confirmInput).toBeTruthy();
   });
 
   describe('manual validation', () => {
@@ -55,6 +53,32 @@ describe('ConfirmInputDirective', () => {
       directive.with = new FormControl('password123');
       const confirm = new FormControl('passwordABC');
       expect(directive.validate(confirm)).toEqual({ confirm: { value: 'passwordABC' } });
+    });
+  });
+
+  describe('confirm validator', () => {
+    beforeEach(() => {
+      component.form.controls.testConfirm.setValidators(
+        ConfirmInputDirective.confirmInput(component.form.controls.test as FormControl)
+      );
+    });
+
+    it('should handle invalid case', () => {
+      component.form.controls.testConfirm.setValue('MyPasswordXXX');
+      component.form.controls.test.setValue('MyPassword123');
+      component.form.controls.testConfirm.updateValueAndValidity();
+
+      const errors = component.form.controls.testConfirm.errors;
+      expect(errors).toEqual({ confirm: { value: 'MyPasswordXXX' } });
+    });
+
+    it('should handle valid case', () => {
+      component.form.controls.testConfirm.setValue('MyPassword123');
+      component.form.controls.test.setValue('MyPassword123');
+      component.form.controls.testConfirm.updateValueAndValidity();
+
+      const errors = component.form.controls.testConfirm.errors;
+      expect(errors).toEqual(null);
     });
   });
 });
