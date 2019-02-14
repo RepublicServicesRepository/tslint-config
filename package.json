@@ -42,7 +42,7 @@
     }
   },
   "workspaces": [
-    "libs/*/*",
+    "libs/component/*",
     "libs/*"
   ],
   "private": true,
