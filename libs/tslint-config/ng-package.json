@@ -6,7 +6,6 @@
   },
   "whitelistedNonPeerDependencies": [
     "codelyzer",
-    "rxjs-tslint",
     "tslint-config-prettier",
     "tslint-eslint-rules",
     "tslint-plugin-prettier"

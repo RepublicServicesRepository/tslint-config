@@ -1,7 +1,6 @@
 module.exports = {
   'rulesDirectory': [
     'codelyzer',
-    'rxjs-tslint',
     'tslint-plugin-prettier'
   ],
   'rules': {
@@ -110,11 +109,7 @@ module.exports = {
     'use-life-cycle-interface': true,
     'use-pipe-transform-interface': true,
     'component-class-suffix': true,
-    'directive-class-suffix': true,
-    'rxjs-collapse-imports': true,
-    'rxjs-pipeable-operators-only': true,
-    'rxjs-no-static-observable-methods': true,
-    'rxjs-proper-imports': true
+    'directive-class-suffix': true
   },
   'extends': [
     'tslint:recommended',
