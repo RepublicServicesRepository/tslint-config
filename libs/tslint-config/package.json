@@ -1,6 +1,6 @@
 {
   "name": "@republicservices/tslint-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Republic Services TSLint configuration",
   "main": "index.js",
   "author": "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)",
