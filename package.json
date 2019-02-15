@@ -27,9 +27,7 @@
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
     "nuke": "rm -rf node_modules",
-    "clean:dist": "for i in `lerna list -p`; do rimraf $i/dist; done; rimraf dist",
-    "prelerna:publish": "yarn --silent clean:dist; yarn --silent affected:build --base master && lerna version --yes",
-    "lerna:publish": "lerna publish from-git"
+    "clean:dist": "for i in `lerna list -p`; do rimraf $i/dist; done; rimraf dist"
   },
   "repository": {
     "type": "git",
