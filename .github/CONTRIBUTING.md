@@ -6,9 +6,11 @@ Please take the time to read, understand, and follow all of the Standards, not l
 
 ## Git Commits
 
-Commits *must follow* our [Commit Guidelines](https://republicservices.atlassian.net/wiki/spaces/WMD/pages/33980534/Git+Workflow#GitWorkflow-Makingacommit). Please make sure all of your commits follow these guidelines, or your Pull Request (PR) *will be rejected*.
+Commits *must follow* [Conventional Commits](https://conventionalcommits.org) guidelines. Please make sure all of your commits follow these guidelines, or your Pull Request (PR) *will be rejected*.
 
-> ⚠ **Do not** bypass any automatic checks
+For a more detailed breakdown, it's also the [*same conventions used by the Angular team*](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit), so you can [see some examples](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit) here.
+
+> ⚠️ **Do not** bypass any automatic checks when committing
 
 ## GitHub Pull Requests
 
