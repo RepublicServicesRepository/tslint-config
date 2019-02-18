@@ -23,7 +23,8 @@ Republic Services’ color palette is simple and strong. By effectively using a 
 ![#003a69](https://placehold.it/15/003a69/000000?text=+) 003a69 |rgba (0,58,105,1)| @700 | ffffff
 ![#00325f](https://placehold.it/15/00325f/000000?text=+) 00325f |rgba (0,50,95,1)| @800 | ffffff
 ![#00224c](https://placehold.it/15/00224c/000000?text=+) 00224c |rgba (0,34,76,1)| @900 | ffffff
-```
+
+```scss
 $mdThemingProvider.definePalette('primary', {
   '50': 'e0e9ef',
   '100': 'b3c9d8',
@@ -79,7 +80,7 @@ $mdThemingProvider.definePalette('primary', {
 ![#0093e8](https://placehold.it/15/0093e8/000000?text=+) 0093e8 | rgba(0,147,232,1) | @800  | ffffff
 ![#0083e4](https://placehold.it/15/0083e4/000000?text=+) 0083e4 | rgba(0,131,228,1) | @900  | ffffff
 
-```
+```scss
 $mdThemingProvider.definePalette('secondary', {
  '50': 'e0f5fd',
   '100': 'b3e6fa',
@@ -116,6 +117,7 @@ $mdThemingProvider.definePalette('secondary', {
   ]
 });
 ```
+
 ### Alert Palette
 
 |Hexadecimal Color  | RGBA Color | HTML Color | Contrast
@@ -134,7 +136,7 @@ $mdThemingProvider.definePalette('secondary', {
 ![#900c00](https://placehold.it/15/900c00/000000?text=+) 900c00 | rgba(144,12,0,1) | @800  | ffffff
 ![#7f0600](https://placehold.it/15/7f0600/000000?text=+) 7f0600 | rgba(127,6,0,1) | @900  | ffffff
 
-```
+```scss
 $mdThemingProvider.definePalette('alert', {
   '50': 'f5e3e0',
   '100': 'e6b9b3',
@@ -171,6 +173,7 @@ $mdThemingProvider.definePalette('alert', {
   ]
 });
 ```
+
 ### Greys Palette
 
 |Hexadecimal Color  | RGBA Color | HTML Color | Contrast
@@ -186,7 +189,7 @@ $mdThemingProvider.definePalette('alert', {
 ![#838690](https://placehold.it/15/838690/000000?text=+) 838690 | rgba(131,134,144,1) | @800  | 000000
 ![#72757f](https://placehold.it/15/72757f/000000?text=+) 72757f | rgba(114,117,127,1) | @900  | ffffff
 
-```
+```scss
 $mdThemingProvider.definePalette('grey', {
   '50': 'f3f4f5',
   '100': 'e2e3e6',
@@ -223,6 +226,7 @@ $mdThemingProvider.definePalette('grey', {
   ]
 });
 ```
+
 ### Accent Palette
 
 |Hexadecimal Color  | RGBA Color | HTML Color |
@@ -240,7 +244,7 @@ $mdThemingProvider.definePalette('grey', {
 ![#64c644](https://placehold.it/15/64c644/000000?text=+) 64c644 |rgba(100, 198, 68, 1) |@successGreen
 ![#2c541c](https://placehold.it/15/2c541c/000000?text=+) 2c541c |rgba(44, 84, 28, 1) |@successGreenDark
 
-```
+```scss
 $mdThemingProvider.definePalette('accent', {
   '50': 'fef1e0',
   '100': 'fbdcb3',
