@@ -217,6 +217,14 @@
           "options": {
             "project": "libs/tslint-config/ng-package.json"
           }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
         }
       }
     }

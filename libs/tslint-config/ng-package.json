@@ -3,11 +3,5 @@
   "dest": "./dist/",
   "lib": {
     "entryFile": "index.ts"
-  },
-  "whitelistedNonPeerDependencies": [
-    "codelyzer",
-    "tslint-config-prettier",
-    "tslint-eslint-rules",
-    "tslint-plugin-prettier"
-  ]
+  }
 }
