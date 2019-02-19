@@ -5,7 +5,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 0.1.0 (2019-02-15)
 
-
 ### Features
 
-* add tslint-config lib ([d8cafb2](http://republicservicesrepository/design-core/commits/d8cafb2))
+- add tslint-config lib ([d8cafb2](http://republicservicesrepository/design-core/commits/d8cafb2))

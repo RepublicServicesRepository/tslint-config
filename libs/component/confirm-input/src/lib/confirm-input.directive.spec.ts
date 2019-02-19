@@ -8,9 +8,16 @@ import { ConfirmInputDirective } from './confirm-input.directive';
   selector: 'rsi-confirm-wrapper',
   template: `
     <form [formGroup]="form">
-      <input type="text" formControlName="test">
-      <input #confirmInput type="text" formControlName="testConfirm" rsiConfirm [with]="test">
-    </form>`
+      <input type="text" formControlName="test" />
+      <input
+        #confirmInput
+        type="text"
+        formControlName="testConfirm"
+        rsiConfirm
+        [with]="test"
+      />
+    </form>
+  `
 })
 class AppConfirmValidatorWrapperComponent {
   @ViewChild('confirmInput') public confirmInput: ConfirmInputDirective;
@@ -25,17 +32,15 @@ describe('ConfirmInputDirective', () => {
   let component: AppConfirmValidatorWrapperComponent;
   let fixture: ComponentFixture<AppConfirmValidatorWrapperComponent>;
 
-  beforeEach(
-    async(() => {
-      TestBed.configureTestingModule({
-        declarations: [
-          ConfirmInputDirective,
-          AppConfirmValidatorWrapperComponent,
-        ],
-        schemas: [NO_ERRORS_SCHEMA]
-      }).compileComponents();
-    })
-  );
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        ConfirmInputDirective,
+        AppConfirmValidatorWrapperComponent
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AppConfirmValidatorWrapperComponent);
@@ -52,14 +57,17 @@ describe('ConfirmInputDirective', () => {
       const directive = new ConfirmInputDirective();
       directive.with = new FormControl('password123');
       const confirm = new FormControl('passwordABC');
-      expect(directive.validate(confirm)).toEqual({ confirm: { value: 'passwordABC' } });
+      expect(directive.validate(confirm)).toEqual({
+        confirm: { value: 'passwordABC' }
+      });
     });
   });
 
   describe('confirm validator', () => {
     beforeEach(() => {
       component.form.controls.testConfirm.setValidators(
-        ConfirmInputDirective.confirmInput(component.form.controls.test as FormControl)
+        ConfirmInputDirective.confirmInput(component.form.controls
+          .test as FormControl)
       );
     });
 

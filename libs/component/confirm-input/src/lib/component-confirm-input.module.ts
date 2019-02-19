@@ -7,4 +7,4 @@ import { ConfirmInputDirective } from './confirm-input.directive';
   declarations: [ConfirmInputDirective],
   exports: [ConfirmInputDirective]
 })
-export class ComponentConfirmInputModule { }
+export class ComponentConfirmInputModule {}

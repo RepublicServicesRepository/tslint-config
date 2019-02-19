@@ -8,7 +8,7 @@ This is duplicated as `index.ts` (for builds) and `index.js` because I can't fig
 
 The `index.js` copy is needed for direct inclusion and use within the design-core monorepo.
 
-> ⚠️ ***If you change any rule, update both copies***
+> ⚠️ **_If you change any rule, update both copies_**
 
 I recommend updating the `index.js` first, to test the effects of the changes in subprojects of the monorepo, then update the `index.ts` to match when ready.
 

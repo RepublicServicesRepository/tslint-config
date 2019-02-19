@@ -8,18 +8,16 @@ import { HeaderComponent } from './header.component';
   selector: 'mat-toolbar,mat-toolbar-row',
   template: '<ng-content></ng-content>'
 })
-class MockMaterialComponent { }
+class MockMaterialComponent {}
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async(() => {
-    TestBed
-      .configureTestingModule({
-        declarations: [HeaderComponent, MockMaterialComponent]
-      })
-      .compileComponents();
+    TestBed.configureTestingModule({
+      declarations: [HeaderComponent, MockMaterialComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
