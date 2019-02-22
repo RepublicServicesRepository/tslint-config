@@ -124,9 +124,12 @@
       "projectType": "library",
       "prefix": "rsi",
       "architect": {
-        "xbuild": {
-          "builder": "builder coming soon",
+        "build": {
+          "builder": "./tools/custom-builders:sass-bundle",
           "options": {
+            "sassEntryDir": "libs/styles/src",
+            "sassEntryFile": "core.scss",
+            "outputPath": "libs/styles/dist/republicservices-core.scss",
             "project": "libs/styles/ng-package.json"
           }
         }

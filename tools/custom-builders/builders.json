@@ -1,0 +1,10 @@
+{
+  "$schema": "@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "sass-bundle": {
+      "class": "./sass-bundle-builder",
+      "schema": "./sass-bundle-builder/schema.json",
+      "description": "Sass bundle builder"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "sassBundleBuilder": {
+      "type": "object",
+      "description": "Custom Sass bundler configuration",
+      "properties": {
+        "inputFile": {
+          "type": "string",
+          "description": "Name of scss entry file"
+        },
+        "outputFile": {
+          "type": "string",
+          "description": "Name of final output file"
+        }
+      }
+    }
+  }
+}
