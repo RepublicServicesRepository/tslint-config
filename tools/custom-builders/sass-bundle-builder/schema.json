@@ -4,13 +4,17 @@
       "type": "object",
       "description": "Custom Sass bundler configuration",
       "properties": {
-        "inputFile": {
+        "sassEntryDir": {
+          "type": "string",
+          "description": "Name of scss entry directory"
+        },
+        "sassEntryFile": {
           "type": "string",
           "description": "Name of scss entry file"
         },
-        "outputFile": {
+        "outputPath": {
           "type": "string",
-          "description": "Name of final output file"
+          "description": "Full path for the output file"
         }
       }
     }
