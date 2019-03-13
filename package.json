@@ -27,6 +27,7 @@
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
     "nuke": "rm -rf node_modules",
+    "staged": "git diff --name-only --cached",
     "clean:dist": "for i in `lerna list -p`; do rimraf $i/dist; done; rimraf dist"
   },
   "repository": {
@@ -36,7 +37,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn format; lint-staged"
+      "pre-commit": "yarn format --files $(yarn -s staged); git add $(yarn -s staged); lint-staged"
     }
   },
   "lint-staged": {
