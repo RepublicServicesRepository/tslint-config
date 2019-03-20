@@ -1,12 +1,8 @@
 export default {
   rulesDirectory: ['codelyzer', 'tslint-plugin-prettier'],
-  extends: [
-    'tslint:recommended',
-    'tslint-eslint-rules',
-    'tslint-config-prettier'
-  ],
+  extends: ['tslint:recommended', 'tslint-eslint-rules', 'tslint-config-prettier'],
   rules: {
-    prettier: [2, { singleQuote: true, printWidth: 100 }],
+    prettier: [true, { singleQuote: true, printWidth: 100, tabWidth: 2 }],
     'arrow-return-shorthand': true,
     'binary-expression-operand-order': true,
     'callable-types': true,
@@ -23,12 +19,7 @@ export default {
     'member-ordering': [
       true,
       {
-        order: [
-          'static-field',
-          'instance-field',
-          'static-method',
-          'instance-method'
-        ]
+        order: ['static-field', 'instance-field', 'static-method', 'instance-method']
       }
     ],
     'newline-before-return': true,
