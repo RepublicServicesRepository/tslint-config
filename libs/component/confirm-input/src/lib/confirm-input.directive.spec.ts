@@ -9,13 +9,7 @@ import { ConfirmInputDirective } from './confirm-input.directive';
   template: `
     <form [formGroup]="form">
       <input type="text" formControlName="test" />
-      <input
-        #confirmInput
-        type="text"
-        formControlName="testConfirm"
-        rsiConfirm
-        [with]="test"
-      />
+      <input #confirmInput type="text" formControlName="testConfirm" rsiConfirm [with]="test" />
     </form>
   `
 })
@@ -34,10 +28,7 @@ describe('ConfirmInputDirective', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        ConfirmInputDirective,
-        AppConfirmValidatorWrapperComponent
-      ],
+      declarations: [ConfirmInputDirective, AppConfirmValidatorWrapperComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
@@ -66,8 +57,7 @@ describe('ConfirmInputDirective', () => {
   describe('confirm validator', () => {
     beforeEach(() => {
       component.form.controls.testConfirm.setValidators(
-        ConfirmInputDirective.confirmInput(component.form.controls
-          .test as FormControl)
+        ConfirmInputDirective.confirmInput(component.form.controls.test as FormControl)
       );
     });
 

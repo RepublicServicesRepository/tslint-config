@@ -1,17 +1,10 @@
 import { Directive, Input } from '@angular/core';
-import {
-  FormControl,
-  NG_VALIDATORS,
-  ValidationErrors,
-  Validator
-} from '@angular/forms';
+import { FormControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 
 // @dynamic
 @Directive({
   selector: '[rsiConfirm]',
-  providers: [
-    { provide: NG_VALIDATORS, useExisting: ConfirmInputDirective, multi: true }
-  ]
+  providers: [{ provide: NG_VALIDATORS, useExisting: ConfirmInputDirective, multi: true }]
 })
 export class ConfirmInputDirective implements Validator {
   @Input() with: FormControl;
