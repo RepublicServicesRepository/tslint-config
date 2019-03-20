@@ -28,6 +28,7 @@
     "help": "./node_modules/.bin/nx help",
     "nuke": "rm -rf node_modules",
     "staged": "git diff --name-only --cached",
+    "lines-to-commas": "node ./tools/scripts/join-lines.js",
     "clean:dist": "for i in `lerna list -p`; do rimraf $i/dist; done; rimraf dist"
   },
   "repository": {
@@ -37,7 +38,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn format --files $(yarn -s staged) && yarn affected:lint --uncommitted --fix && git add $(yarn -s staged)"
+      "pre-commit": "yarn format --files $(yarn -s staged | yarn -s lines-to-commas) && yarn affected:lint --uncommitted --fix && git add $(yarn -s staged)"
     }
   },
   "workspaces": [
