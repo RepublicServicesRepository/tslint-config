@@ -37,14 +37,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn format --files $(yarn -s staged); git add $(yarn -s staged); lint-staged"
+      "pre-commit": "yarn format --files $(yarn -s staged); yarn affected:lint --parallel --files $(yarn -s staged | tr '\n' ',' | head -c-1); git add $(yarn -s staged)"
     }
-  },
-  "lint-staged": {
-    "*.{t,j}s": [
-      "yarn affected:lint --parallel --files",
-      "git add"
-    ]
   },
   "workspaces": [
     "libs/component/*",
@@ -95,7 +89,6 @@
     "jest": "^23.0.0",
     "jest-preset-angular": "6.0.1",
     "lerna": "^3.10.7",
-    "lint-staged": "^8.1.4",
     "ng-packagr": "^4.2.0",
     "ngrx-store-freeze": "0.2.4",
     "prettier": "^1.16.4",
