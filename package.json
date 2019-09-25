@@ -1,108 +1,30 @@
 {
-  "name": "design-core",
-  "version": "0.0.0",
-  "description": "RSI branding, design, and related standards/components core library",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "./node_modules/.bin/nx lint && ng lint",
-    "list": "lerna list",
-    "e2e": "ng e2e",
-    "affected": "./node_modules/.bin/nx affected",
-    "affected:apps": "./node_modules/.bin/nx affected:apps",
-    "affected:libs": "./node_modules/.bin/nx affected:libs",
-    "affected:build": "./node_modules/.bin/nx affected:build",
-    "affected:e2e": "./node_modules/.bin/nx affected:e2e",
-    "affected:test": "./node_modules/.bin/nx affected:test",
-    "affected:lint": "./node_modules/.bin/nx affected:lint",
-    "affected:dep-graph": "./node_modules/.bin/nx affected:dep-graph",
-    "format": "./node_modules/.bin/nx format:write",
-    "format:write": "./node_modules/.bin/nx format:write",
-    "format:check": "./node_modules/.bin/nx format:check",
-    "update": "ng update @nrwl/schematics",
-    "update:check": "ng update",
-    "workspace-schematic": "./node_modules/.bin/nx workspace-schematic",
-    "dep-graph": "./node_modules/.bin/nx dep-graph",
-    "help": "./node_modules/.bin/nx help",
-    "nuke": "rm -rf node_modules",
-    "staged": "git diff --name-only --cached",
-    "lines-to-commas": "node ./tools/scripts/join-lines.js",
-    "clean:dist": "for i in `lerna list -p`; do rimraf $i/dist; done; rimraf dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/RepublicServicesRepository/design-core"
-  },
+  "name": "@republicservices/tslint-config",
+  "description": "Republic Services TSLint configuration",
+  "version": "0.2.0",
+  "main": "index.js",
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn format --files $(yarn -s staged | yarn -s lines-to-commas) && yarn affected:lint --uncommitted --fix && git add $(yarn -s staged)"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "workspaces": [
-    "libs/component/*",
-    "libs/*"
-  ],
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^7.2.4",
-    "@angular/cdk": "^7.3.1",
-    "@angular/common": "^7.2.4",
-    "@angular/compiler": "^7.2.4",
-    "@angular/core": "^7.2.4",
-    "@angular/forms": "^7.2.4",
-    "@angular/material": "^7.3.1",
-    "@angular/platform-browser": "^7.2.4",
-    "@angular/platform-browser-dynamic": "^7.2.4",
-    "@angular/router": "^7.2.4",
-    "@ngrx/effects": "6.1.2",
-    "@ngrx/router-store": "6.1.2",
-    "@ngrx/store": "6.1.2",
-    "@nrwl/nx": "7.5.1",
-    "core-js": "^2.5.4",
-    "rxjs": "^6.4.0",
-    "zone.js": "^0.8.29"
+  "author": "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
-  "devDependencies": {
-    "@angular-builders/jest": "^7.3.1",
-    "@angular-devkit/build-angular": "~0.13.0",
-    "@angular-devkit/build-ng-packagr": "~0.13.0",
-    "@angular/cli": "7.3.1",
-    "@angular/compiler-cli": "^7.2.4",
-    "@angular/language-service": "^7.2.4",
-    "@commitlint/cli": "^7.2.1",
-    "@commitlint/config-conventional": "^7.1.2",
-    "@ngrx/schematics": "6.1.2",
-    "@ngrx/store-devtools": "6.1.2",
-    "@nrwl/builders": "7.5.1",
-    "@nrwl/schematics": "7.5.1",
-    "@types/jasmine": "~2.8.6",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/jest": "^23.0.0",
-    "@types/node": "~8.9.4",
+  "peerDependencies": {
     "codelyzer": "^4.5.0",
-    "husky": "^1.1.3",
-    "jasmine-core": "~2.99.1",
-    "jasmine-marbles": "0.4.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "jest": "^23.0.0",
-    "jest-preset-angular": "6.0.1",
-    "lerna": "^3.10.7",
-    "ng-packagr": "^4.2.0",
-    "ngrx-store-freeze": "0.2.4",
     "prettier": "^1.16.4",
-    "protractor": "~5.4.0",
-    "rimraf": "^2.6.3",
-    "scss-bundle": "^2.5.0",
-    "ts-node": "~7.0.0",
-    "tsickle": ">=0.29.0",
-    "tslib": "^1.9.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "~3.2.2"
+    "typescript": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.5"
   }
 }
