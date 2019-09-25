@@ -13,7 +13,7 @@ node {
         sh 'git config user.email "${GIT_USERNAME}"'
 
         sh 'npx standard-version'
-        sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/RepublicServicesRepository/tslint-config.git --follow-tags origin HEAD && npm publish'
+        sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/RepublicServicesRepository/tslint-config.git HEAD --follow-tags && npm publish'
       }
     }
   }
