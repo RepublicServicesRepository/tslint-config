@@ -1,4 +1,8 @@
 node {
+  stage('Clean workspace') {
+    cleanWs()
+  }
+
   stage('Checkout') {
     checkout scm
   }
