@@ -17,7 +17,8 @@ node {
         sh 'git config user.email "${GIT_USERNAME}"'
 
         sh 'npx standard-version'
-        sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/RepublicServicesRepository/tslint-config.git HEAD:master -u --follow-tags && npm publish --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}'
+        sh 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc'
+        sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/RepublicServicesRepository/tslint-config.git HEAD:master -u --follow-tags && npm publish'
       }
     }
   }
