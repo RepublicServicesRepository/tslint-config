@@ -17,7 +17,7 @@ node {
         sh 'git config user.email "${GIT_USERNAME}"'
 
         sh 'npx standard-version'
-        sh 'git push origin HEAD:master --follow-tags && npm publish'
+        sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/RepublicServicesRepository/tslint-config.git HEAD:master -u --follow-tags && npm publish'
       }
     }
   }
