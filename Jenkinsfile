@@ -17,7 +17,6 @@ node {
         sh 'git config user.email "${GIT_USERNAME}"'
 
         sh 'npx standard-version'
-        sh 'git remote add origin https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/RepublicServicesRepository/tslint-config.git'
         sh 'git push origin master --follow-tags && npm publish'
       }
     }
