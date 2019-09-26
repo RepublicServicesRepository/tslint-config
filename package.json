@@ -1,7 +1,7 @@
 {
   "name": "@republicservices/tslint-config",
   "description": "Republic Services TSLint configuration",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "index.js",
   "husky": {
     "hooks": {
