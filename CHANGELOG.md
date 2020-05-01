@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/RepublicServicesRepository/tslint-config/compare/v0.2.4...v0.3.0) (2020-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* update codelyzer peerDependencies
+
+### Features
+
+* bump codelyzer version ([748d005](https://github.com/RepublicServicesRepository/tslint-config/commit/748d0051bf4ee472231c74ae401e2df6507a836f))
+
+
+### Bug Fixes
+
+* update rule names ([7ca2619](https://github.com/RepublicServicesRepository/tslint-config/commit/7ca2619f856f1d7e6139d8698d2c86a5149d8b0e)), closes [/github.com/mgechev/codelyzer/issues/791#issuecomment-474031004](https://github.com/RepublicServicesRepository//github.com/mgechev/codelyzer/issues/791/issues/issuecomment-474031004)
+* update rule names ([1840999](https://github.com/RepublicServicesRepository/tslint-config/commit/1840999d9a04b4cc7c4bd2464da5870d89add0f2)), closes [/github.com/mgechev/codelyzer/issues/791#issuecomment-474031004](https://github.com/RepublicServicesRepository//github.com/mgechev/codelyzer/issues/791/issues/issuecomment-474031004)
+
 ### [0.2.4](https://github.com/RepublicServicesRepository/tslint-config/compare/v0.2.3...v0.2.4) (2019-09-26)
 
 ### [0.2.3](https://github.com/RepublicServicesRepository/tslint-config/compare/v0.2.2...v0.2.3) (2019-09-26)
