@@ -1,7 +1,7 @@
 {
   "name": "@republicservices/tslint-config",
   "description": "Republic Services TSLint configuration",
-  "version": "0.3.0",
+  "version": "0.3.8",
   "main": "index.js",
   "husky": {
     "hooks": {
@@ -23,8 +23,8 @@
     "typescript": ">=3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "husky": "^3.0.5"
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5"
   }
 }
